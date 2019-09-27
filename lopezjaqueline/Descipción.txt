@@ -1,0 +1,15 @@
+
+				          'SPACE ODYSSEY'
+
+
+
+	La creación de mi página Web consumiendo API´S llamada "SPACE ODYSSEY", será un "Bazar online" 
+	exclusivo de un sólo tema, en donde se comercializarán todo tipo de productos (Playeras, chamarras, 
+	gorras, accesorios, mochilas, lapiceras, servilletas bordadas, entre otras cosas más), con diseños 
+	del espacio exterior (planetas, estrellas, cometas, constelaciones, logotipo NASA, naves espaciales, 
+	sistemas solares), todo bajo API´S que no necesiten pagarse, para el almacenamiento de de estos datos, 
+	se utilizará una Base de Datos,  en la geolocalización contendrá la ubicación de la tienda local que 
+	nuestro servicio ofrece. El objetivo de esta página Web será para las personas que aman este tipo de 
+	temática y que tal vez no están al alcance de una tienda con productos de este diseño. Así también, 
+	podrán comprar los productos que les interesen por medio de Internet con una API E-Commerce, 
+	contendrá otro extra sobre documentales acerca del espacio exterior con una plataforma Streaming.
