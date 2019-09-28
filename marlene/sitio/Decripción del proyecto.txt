@@ -1,0 +1,16 @@
+TheMarMusic
+
+
+La aplicación web que se va a realizar va a estar enfocado principalmente a la música,
+la pagina hablara sobre diferentes tipos de géneros de música que existen, para los 
+apartados de cada genero se usara la API de youtube para cargar los vídeos de diferentes
+artistas dependiendo del genero elegido, además, se mostrara un mapa con la API de
+geolocalización para localizar los establecimientos donde pueden comprar discos de música
+o algunos otros artículos sobre el tema, sin embargo, se esta viendo la posibilidad de
+que al entrar a la pagina puedas iniciar sesión con la cuenta de facebook o de youtube
+pero aun no se tiene definido con que API va a iniciar la sesión del usuario.
+
+
+En este corto párrafo se habla del tema de la pagina y las API que se van a requerir para 
+el funcionamiento de esta, pese a ser pequeño el trabajo se buscara la forma de agregarle
+más cosas y funcionalidades en un futuro.
