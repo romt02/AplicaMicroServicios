@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>API's</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        div.row {
+            height: 400px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="main">
+
+
+    </section>
+    <section id="barra" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">BGasser</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="geolocalizacion.html">Geolocalización</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="social.html">Facebook</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="YT.html">Youtube</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+        </nav>
+
+    </section>
+    <br><br><br>
+    <div class="container" style="width: 100%">
+        <h1> Youtube </h1>
+        <div class="row">
+            <div class="col-sm">
+
+                <!--YT VIDEO-->
+                <div id="player" class="col-sm">
+
+                    <script>
+                        
+
+                        // 2. This code loads the IFrame Player API code asynchronously.
+                        var tag = document.createElement('script');
+
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        var firstScriptTag = document.getElementsByTagName('script')[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                        // 3. This function creates an <iframe> (and YouTube player)
+                        //    after the API code downloads.
+                        var player;
+
+                        function onYouTubeIframeAPIReady() {
+                            player = new YT.Player('player', {
+                                height: '480.',
+                                width: '1215',
+                                videoId: 'FueWML5xPJk',
+                                events: {
+                                    'onReady': onPlayerReady,
+                                    'onStateChange': onPlayerStateChange
+                                }
+                            });
+                        }
+
+
+                        // 4. The API will call this function when the video player is ready.
+                        function onPlayerReady(event) {
+                            event.target.playVideo();
+                        }
+
+                        // 5. The API calls this function when the player's state changes.
+                        //    The function indicates that when playing a video (state=1),
+                        //    the player should play for six seconds and then stop.
+                        var done = false;
+
+                        function onPlayerStateChange(event) {
+                            if (event.data == YT.PlayerState.PLAYING && !done) {
+                                setTimeout(stopVideo, 100);
+                                done = true;
+
+                            }
+                        }
+
+                        function stopVideo() {
+                            player.stopVideo();
+                        }
+                    </script>
+                    <br>
+                </div>
+
+                <script src="https://apis.google.com/js/platform.js"></script>
+
+                <div class="g-ytsubscribe" data-channel="DubstepGutter" data-layout="full" data-theme="dark"
+                    data-count="hidden"></div>
+</body>
+
+</html>

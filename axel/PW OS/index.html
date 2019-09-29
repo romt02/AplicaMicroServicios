@@ -44,6 +44,11 @@
                 <li class="nav-item ">
                     <a class="nav-link" href="social.html">Facebook</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="YT.html">Youtube</a>
+
+                </li>
+
 
 
             </ul>
@@ -59,17 +64,29 @@
     <div class="container" style="width: 100%">
         <div class="row">
             <div class="col-sm">
-                <div id="face" class="col-sm">
-                    <script type="text/javascript" src="apiFacebook.js"></script>
-                </div>
-            
-                <script>
 
+                <!--FACEBOOK-->
+                <div id="fb" class="col-sm">
+                    <div class="fb-login-button" data-width="300" data-size="large" data-button-type="login_with"
+                        data-auto-logout-link="false" data-use-continue-as="true"></div>
+                    <!--SCRIPT FACEBOOK-->
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=400208140641337&autoLogAppEvents=1">
+                    </script>
+                    </script>
+                </div>
+
+                <!--MAPA-->
+                <!--SCRIPT MAPA-->
+                <script>
                     var map, infoWindow;
 
                     function initMap() {
                         map = new google.maps.Map(document.getElementById('mapa'), {
-                            center: { lat: 19.4978, lng: -99.1269 },
+                            center: {
+                                lat: 19.4978,
+                                lng: -99.1269
+                            },
                             zoom: 6
                         });
 
@@ -104,11 +121,9 @@
                     }
                 </script>
 
-                <script
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5uXU6E-ntQwH2hRGLpot_J7Mgi_3kqPA&callback=initMap">
-                    </script>
             </div>
 
+            <!--YT VIDEO-->
             <div id="player" class="col-sm">
                 Youtube
                 <script>
@@ -122,6 +137,7 @@
                     // 3. This function creates an <iframe> (and YouTube player)
                     //    after the API code downloads.
                     var player;
+
                     function onYouTubeIframeAPIReady() {
                         player = new YT.Player('player', {
                             height: '360',
@@ -144,27 +160,32 @@
                     //    The function indicates that when playing a video (state=1),
                     //    the player should play for six seconds and then stop.
                     var done = false;
+
                     function onPlayerStateChange(event) {
                         if (event.data == YT.PlayerState.PLAYING && !done) {
                             setTimeout(stopVideo, 100);
                             done = true;
                         }
                     }
+
                     function stopVideo() {
                         player.stopVideo();
                     }
                 </script>
             </div>
 
+            <!--MAPA-->
             <div id="mapa" class="col-sm">
                 Google Maps
                 <script>
-
                     var map, infoWindow;
 
                     function initMap() {
                         map = new google.maps.Map(document.getElementById('mapa'), {
-                            center: { lat: 19.4978, lng: -99.1269 },
+                            center: {
+                                lat: 19.4978,
+                                lng: -99.1269
+                            },
                             zoom: 6
                         });
 
@@ -193,14 +214,14 @@
                     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         infoWindow.setPosition(pos);
                         infoWindow.setContent(browserHasGeolocation ?
-                            'Error: El servicio de Geolocalización falló' :
+                            'Debes permitir  acceso a la ubicacion para utlizar la Geolocalizacion.' :
                             'Error: Tu navegador no soporta Geolocalización.');
                         infoWindow.open(map);
                     }
                 </script>
                 <script
                     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5uXU6E-ntQwH2hRGLpot_J7Mgi_3kqPA&callback=initMap">
-                    </script>
+                </script>
             </div>
         </div>
     </div>

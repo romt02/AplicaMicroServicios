@@ -1,10 +1,4 @@
-FB.login(function(response) {
-    if (response.authResponse) {
-     console.log('Welcome!  Fetching your information.... ');
-     FB.api('/me', function(response) {
-       console.log('Good to see you, ' + response.name + '.');
-     });
-    } else {
-     console.log('User cancelled login or did not fully authorize.');
-    }
-});
+<div id="fb" class="col-sm">
+<div class="fb-login-button" data-width="300" data-size="large" data-button-type="login_with"
+    data-auto-logout-link="true" data-use-continue-as="true"></div>
+</div>
