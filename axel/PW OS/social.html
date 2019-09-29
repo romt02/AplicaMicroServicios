@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GEOLOCALIZACION</title>
+    <title>API's</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <style>
@@ -19,6 +19,12 @@
 </head>
 
 <body>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0&appId=400208140641337&autoLogAppEvents=1">
+    </script>
+
     <section class="main">
 
 
@@ -56,19 +62,15 @@
     <div class="container" style="width: 100%">
         <h1> Facebook </h1><br>
         <div class="row">
-
-            <div id="facebook" class="col-sm">
-
-                <script>
-
-                    //PENDIENTE//
-
-                </script>
-                <script src="">
-                </script>
+            <div id="fb" class="col-sm">
+                <div class="fb-login-button" data-width="300" data-size="large" data-button-type="login_with"
+                    data-auto-logout-link="true" data-use-continue-as="true"></div>
             </div>
+
         </div>
     </div>
+
+
 
 </body>
 
